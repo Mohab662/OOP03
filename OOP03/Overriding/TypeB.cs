@@ -30,6 +30,10 @@ namespace OOP03.Overriding
         {
             Console.WriteLine($"Type  B : {B}");
         } 
+        public void print()
+        {
+            Console.WriteLine("hello!");
+        }
         #endregion
 
     }

@@ -44,6 +44,21 @@ namespace OOP03
             #endregion
 
 
+            #region Binding
+            ////Binding
+            ////reference from parent = object from child
+
+            //TypeA RefBase = new TypeB(1, 2);
+
+            //RefBase.A = 3; // valid
+            //RefBase.B = 4; // invalid
+
+            //RefBase.MyFunction01(); // new // I am base >> static binded method
+            //RefBase.MyFunction02(); // override // B = 2 >> daynamic binded method
+
+
+            #endregion
+
 
         }
     }
