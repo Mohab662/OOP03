@@ -1,4 +1,5 @@
-﻿using OOP03.Overriding;
+﻿using OOP03.Binding;
+using OOP03.Overriding;
 
 namespace OOP03
 {
@@ -20,6 +21,22 @@ namespace OOP03
         } 
         #endregion
 
+        public static void ProcessEmp(Employee employee)
+        {
+            if (employee!=null)
+            {
+                employee.MyFunction01();
+                employee.MyFunction02();
+            }
+        }
+        //public static void ProcessEmp(FullTimeEmployee employee)
+        //{
+        //    if (employee != null)
+        //    {
+        //        employee.MyFunction01();
+        //        employee.MyFunction02();
+        //    }
+        //}
         static void Main(string[] args)
         {
             #region Overloading
@@ -62,6 +79,39 @@ namespace OOP03
             #endregion
 
 
+            #region When U Need Binding
+            //Employee fullTime = new FullTimeEmployee()
+            //{
+            //    Name = "mohab",
+            //    Salary = 5000,
+            //    Age = 21,
+            //    Id = 123
+            //}; // Binding
+            //Employee partTime = new PartTimeEmployee()
+            //{
+            //    Name = "mohab",
+            //    HourRate = 12,
+            //    Age = 21,
+            //    Id = 123
+            //}; // Binding
+
+            //Employee employee = new Employee(); // ref [parent] => object [parent]
+            //FullTimeEmployee employee1 = new FullTimeEmployee(); // ref child => object [child]
+            //PartTimeEmployee employee2 = new PartTimeEmployee(); // ref child => object [child]
+            //Employee employee3 = new FullTimeEmployee(); // ref [parent] => object [child] Binding
+            //Employee employee4 = new PartTimeEmployee(); // ref [parent] => object [child] Binding
+
+            //ProcessEmp(employee1);
+            //ProcessEmp(employee2);
+            //ProcessEmp(employee3);
+            //ProcessEmp(employee4);
+            //ProcessEmp(partTime);
+            //ProcessEmp(fullTime);
+            ////fullTime.Name = "mohab";
+            ////fullTime.Salary = 5000;
+            ////fullTime.Age = 21;
+            ////fullTime.Id = 123; 
+            #endregion
         }
     }
 }
