@@ -29,6 +29,7 @@ namespace OOP03
                 employee.MyFunction02();
             }
         }
+
         //public static void ProcessEmp(FullTimeEmployee employee)
         //{
         //    if (employee != null)
@@ -112,6 +113,43 @@ namespace OOP03
             ////fullTime.Age = 21;
             ////fullTime.Id = 123; 
             #endregion
+
+
+            #region Practice On Binding
+            ////////////// TypeA reference ////////////////
+            //TypeA typeA = new TypeC(1, 3, 5);
+            //typeA.A = 5; // valid
+            //typeA.B; // invalid
+            //typeA.C; // invalid
+
+            //typeA.MyFunction01(); // I am base [static binding]
+            //typeA.MyFunction02(); // [daynamic binding] C=3
+
+            ////////////// TypeB reference ////////////////
+            //TypeB typeB = new TypeC(1, 3, 5);
+            //typeB.A = 5; // valid
+            //typeB.B; // invalid
+            //typeB.C; // invalid
+
+            //typeB.MyFunction01(); // I am base [static binding]
+            //typeB.MyFunction02(); // [daynamic binding] B=3
+
+            TypeA typeA = new TypeE(1, 2, 3, 4, 5);
+            TypeB typeB = new TypeE(1, 2, 3, 4, 5);
+            TypeC typeC = new TypeE(1, 2, 3, 4, 5);
+
+            // indirect parent
+
+            typeA.MyFunction02(); // bta3t E [daynamic binding]
+            typeB.MyFunction02(); // bta3t E [daynamic binding]
+            typeC.MyFunction02(); // bta3t E [daynamic binding]
+
+            TypeD typeD = new TypeE(1, 2, 3, 4, 5);
+            typeD.MyFunction02(); // bta3t E [daynamic binding]
+
+            #endregion
+
+
         }
     }
 }
