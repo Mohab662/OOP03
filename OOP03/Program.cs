@@ -1,4 +1,5 @@
 ﻿using OOP03.Binding;
+using OOP03.Interfaces;
 using OOP03.Overriding;
 
 namespace OOP03
@@ -150,6 +151,15 @@ namespace OOP03
             #endregion
 
 
+            #region Interface
+
+            //IMyType myType = new MyType();
+            //myType.MyFunc();
+            //myType.Age = 21;
+            //myType.Print();// invalid >> Private
+            //myType.MyTypeFunc(); // invalid
+
+            #endregion
         }
     }
 }
